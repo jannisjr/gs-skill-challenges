@@ -1,10 +1,16 @@
 def verify_string(text)
-  split_string = text.split(" ")
-  punctuation = split_string.last[-1]
-  first_word = split_string[0]
-  if first_word == first_word.capitalize
-    puts " This is gramatically correct"
+  punctuation_marks = ["!", ".", "?"]
+  first_letter = text[0] 
+  punctuation = text[-1]
+  if text == ""
+    "This text has no input"
+  elsif first_letter == first_letter.capitalize && punctuation_marks.include?(punctuation) 
+    "This is gramatically correct"
+  elsif first_letter == first_letter.capitalize
+    "This text has no punctuation mark at the end" 
+  elsif punctuation_marks.include?(punctuation)
+    "This text has no capital letter at the beginning"
   end
 end
 
-verify_string("Have you ever seen the rain?")
+
