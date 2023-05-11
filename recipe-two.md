@@ -12,12 +12,13 @@ _Include the name of the method, its parameters, return value, and side effects.
 
 ```ruby
 
-# verify_string check's to see if the first letter is capitalized
-split_string = verify_string(text)
+# verify_string check's to see if the first letter is capitalized and last character is punctuation
+verify_string(text)
 
 text: a string (e.g. "I wondered lonely as a cloud")
 
-split_string : a list of strings (e.g. ["lonely"])
+punctuation_marks = list of punctuation marks ie ["!", ".", "?"]
+
 
 # The method doesn't print anything or have any other side-effects
 ```
