@@ -1,16 +1,12 @@
 def verify_string(text)
   punctuation_marks = ["!", ".", "?"]
-  first_letter = text[0] 
-  punctuation = text[-1]
   if text == ""
     "This text has no input"
-  elsif first_letter == first_letter.capitalize && punctuation_marks.include?(punctuation) 
+  elsif text[0] == text[0].capitalize && punctuation_marks.include?(text[-1]) 
     "This is gramatically correct"
-  elsif first_letter == first_letter.capitalize
+  elsif text[0] == text[0].capitalize
     "This text has no punctuation mark at the end" 
-  elsif punctuation_marks.include?(punctuation)
+  elsif punctuation_marks.include?(text[-1]) 
     "This text has no capital letter at the beginning"
   end
 end
-
-
