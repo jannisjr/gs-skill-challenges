@@ -4,8 +4,7 @@ def get_most_common_letter(text)
     counter[char] += 1
   end
   counter.delete(" ")
-  counter = counter.to_a.sort_by { |k, v| v }
-  counter[-1].each { |k,v| puts k }
+  counter = counter.to_a.sort_by { |k, v| v }[-1][0]
 end
 
 # Intended output:
