@@ -1,19 +1,21 @@
 require 'reading_time'
 
 RSpec.describe "reading_time" do
-  it "returns 1 when given 2 words" do
-    expect(reading_time("Hello world")).to eq 0.6
-  end
-end
+  context "when given a string of varying length" do
+    it "returns 60 when given 200 words" do
+      expect(reading_time("lorem " * 200)).to eq 60
+    end
 
-RSpec.describe "reading_time" do
-  it "returns 22.5 when given 75 words" do
-    expect(reading_time("It's great that there is so much source code available on public repositories and file shares. No matter the coding task or problem, there is probably already a good solution available somewhere. It is also great that there are so many powerful coding tools available to help you understand, debug, and optimize your code. However, using open-source code and tools does have risks, and you can leave yourself open to malicious code execution and exploits.")).to eq 22.5
-  end
-end
+    it "returns 1 when given 2 words" do
+      expect(reading_time("lorem " * 2)).to eq 1
+    end
 
-RSpec.describe "reading_time" do
-  it "returns 0 when given 0 words" do
-    expect(reading_time("")).to eq 0
+    it "returns 23 when given 75 words" do
+      expect(reading_time("lorem " * 75)).to eq 23
+    end
+
+    it "returns 0 when given an empty string" do
+      expect(reading_time("")).to eq 0
+    end
   end
 end

@@ -1,4 +1,4 @@
 def reading_time(text)
-  length = text.split(" ").length
-  length * 0.3
+  words = text.split(" ")
+  return ((words.length / 200.to_f) * 60).ceil
 end
