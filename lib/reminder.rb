@@ -4,7 +4,7 @@ class Reminder
     # ...
   end
 
-  def remind_me_to(task) # task is a string
+  def remind_me_to(task)
     fail "Please enter a task" if task == ""
     @task_list << task
   end
