@@ -15,6 +15,9 @@ _Include the initializer and public methods with all parameters and return value
 # EXAMPLE
 
 class TackList
+  def initialize #will contain a list of songs
+
+  end
   def track(name) # name is a string
     # No return value
   end
