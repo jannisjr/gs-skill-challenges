@@ -12,6 +12,6 @@ class Menu
     menu_string = @dishes.each_with_index.map do |dish, index|
       "#{index + 1}. #{dish.item} #{sprintf("£%.2f", dish.price)}"
     end
-    menu_string
+    puts menu_string
   end
 end

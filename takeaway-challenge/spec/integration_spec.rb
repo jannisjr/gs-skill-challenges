@@ -27,7 +27,7 @@ RSpec.describe Order do
       expect(io).to receive(:puts).with("Margharita")
       expect(io).to receive(:puts).with("Margharita")
       order.take_order
-
+      expect(io).to receive(:puts).with("Here is your receipt:")
       expect(io).to receive(:puts).with("Margharita £10.00")
       expect(io).to receive(:puts).with("Calzone £12.00")
       expect(io).to receive(:puts).with("Margharita £10.00")

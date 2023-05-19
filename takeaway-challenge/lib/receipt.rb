@@ -9,6 +9,7 @@ class Receipt
   end
 
   def print_receipt
+    @io.puts "Here is your receipt:"
     itemised_list = @order.each do |dish|
       @io.puts "#{dish.item} #{sprintf("£%.2f", dish.price)}"
     end
